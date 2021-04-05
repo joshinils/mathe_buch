@@ -1,0 +1,31 @@
+\documentclass[openany, oneside, a4paper]{book}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc} % ueoeaess
+
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+\blindmathtrue
+
+\usepackage{glossaries}
+\usepackage{hyperref}
+
+\begin{document}
+    \frontmatter
+    \pagestyle{plain}
+    \include{./front/front}
+
+    \tableofcontents
+    \listoftables
+    \listoffigures
+
+    \mainmatter
+    \pagestyle{fancy}
+    \include{./chapters/chapter_000}
+    \include{./chapters/chapter_001}
+
+    \backmatter
+    \include{./back/appendix}
+    \printglossary
+    \include{./back/back}
+\end{document}
