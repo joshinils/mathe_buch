@@ -44,33 +44,54 @@ Beispiel:
 
 Da das sehr aufwendig ist, gibt es einfachere Regeln um Ableitungen zu bestimmen:
 
-Ableitungsregel:\\
-1. Potenzregel:
-\begin{align}
-    f(x) &= ax^n \quad,\; n \in \mathbb{R}\setminus\{0\}\\ %
-    \Rightarrow f'(x) &= n \cdot ax^{n-1} \mcomm \text{"vom Exponenten fällt ein \(n\) vorne dran"}
-\end{align}
+Ableitungsregel:
+\begin{enumerate}
+    \item Potenzregel:
+    \begin{align}
+        f(x) &= ax^n \quad,\; n \in \R\setminus\{0\}\\ %
+        \Rightarrow f'(x) &= n \cdot ax^{n-1} \mcomm \text{"vom Exponenten fällt ein \(n\) vorne dran"}
+    \end{align}
 
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[page=4, height=\textheight, width=.7\linewidth, keepaspectratio, trim=0cm 0cm 0cm 0cm, clip]{./graphics/Ableitungen-1.pdf}}
-    \label{figEmpty}
-    \caption{Ableitungen-1.pdf Seite 4}
-\end{figure}
+    Beispiele:
+    % mal sehen ob das auch praktischer geht mit nem anderen environment zb: https://tex.stackexchange.com/a/265686/202560
+    \begin{enumerate}
+        \item \(x^2 \leadsto 2x\)
+        \item \(x^3 \leadsto 3\cdot x^2\)
+        \item \(4\cdot x^5 \leadsto 20\cdot x^4\)
+        \item \(\sqrt{x} = x^{\nicefrac{1}{2}} \leadsto \frac{1}{2}\cdot x^{-\nicefrac{1}{2}}=\frac{1}{2\sqrt{x}}\)
+        \item \(\frac{1}{x^2}=x^{-2} \leadsto -2\cdot x^{-3} = -\frac{2}{x^3}\)
+    \end{enumerate}
 
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[page=5, height=\textheight, width=.7\linewidth, keepaspectratio, trim=0cm 0cm 0cm 0cm, clip]{./graphics/Ableitungen-1.pdf}}
-    \label{figEmpty}
-    \caption{Ableitungen-1.pdf Seite 5}
-\end{figure}
+    \item Summenregel:
+    \begin{align}
+        f(x) &= g(x) + h(x)\\
+        \Rightarrow f'(x) &= g'(x) + h'(x) \mcomm \text{Summanden einzeln ableiten!}
+    \end{align}
+    Beispiele:
+    \begin{enumerate}
+        \item \(x^2 + 3x^3 \leadsto 2x + 9x^2\)
+        \item \(x + x^2 + 4x^4 \leadsto 1 + 2x + 16x^3\)
+    \end{enumerate}
+    \item Produktregel:
+    \begin{align}
+        f(x) &= g(x) \cdot h(x)\\
+        \Rightarrow f'(x) &= g'(x) \cdot h(x) + g(x) \cdot h'(x)
+    \end{align}
+    Beispiele:
+    \begin{enumerate}
+        \item \(x \cdot x \leadsto 1 \cdot x + x \cdot 1 = 2x \)
+        \item \(x \cdot \sin(x) \leadsto 1 \cdot \sin(x) + x \cdot \cos(x)\)
+        \item \(3x^4 \cdot \e^x \leadsto 12x^2\e^x + 3x^4\e^x\)
+    \end{enumerate}
+    \item Kettenregel:
+    \begin{figure}[H]
+        \centering
+        \fbox{\includegraphics[page=6, height=\textheight, width=.7\linewidth, keepaspectratio, trim=0cm 0cm 0cm 0cm, clip]{./graphics/Ableitungen-1.pdf}}
+        \label{figEmpty}
+        \caption{Ableitungen-1.pdf Seite 6}
+    \end{figure}
+\end{enumerate}
 
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[page=6, height=\textheight, width=.7\linewidth, keepaspectratio, trim=0cm 0cm 0cm 0cm, clip]{./graphics/Ableitungen-1.pdf}}
-    \label{figEmpty}
-    \caption{Ableitungen-1.pdf Seite 6}
-\end{figure}
 
 \begin{figure}[H]
     \centering

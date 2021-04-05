@@ -45,6 +45,7 @@
 \usepackage{adjustbox}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{nicefrac}
 
 % https://tex.stackexchange.com/a/128066/202560
 \newcommand{\eqname}[1]{\tag*{\stackbox{(\theequation)\\#1}}}% Tag equation with name
@@ -58,6 +59,34 @@
     \usepackage{showframe}
     \usepackage{layout}
 }
+
+\newcommand{\R}{ {\mathbb R} }
+\newcommand{\Z}{ {\mathbb Z} }
+\newcommand{\C}{ {\mathbb C} }
+\newcommand{\N}{ {\mathbb N} }
+\newcommand{\e}{ {\,\mathrm e\,} }
+\newcommand{\imag}{\/{\mathrm i}\/}
+\newcommand{\jmag}{\/{\mathrm j}\/}
+\newcommand{\1}{ {\mathds{1}} }
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\xt}{\tilde{x}}
+\newcommand{\dotleq}{\dot{\leq}}
+\newcommand{\m}{\hphantom{-} }
+\newcommand{\dashfill}[1]{\vspace{11pt}\def\dashfill{\cleaders\hbox{#1}\hfill}\hbox to \hsize{\dashfill\hfil}\vspace{11pt}}
+\newcommand{\scdot}{\!\cdot\!}
+\newcommand{\sig}{\text{signum}}
+\newcommand{\Hess}[1]{\mathop{\mathrm{H}}\nolimits#1}
+\newcommand{\laplace}[1]{\mathop{{}\Delta}\nolimits#1}
+\newcommand{\td}{\/\,\mathrm{d}}
+\newcommand{\kommentar}[1]{}
+\newcommand{\Real}[1]{\mathrm{Re}\left\{#1\right\}}
+\newcommand{\Imag}[1]{\mathrm{Im}\left\{#1\right\}}
+\newcommand{\Spur}[1]{\mathrm{Spur}\!\left(#1\right)}
+\newcommand{\skalarprod}[2]{\left\langle#1;#2\right\rangle}
+\newcommand{\scalarprod}[2]{\left\langle#1;#2\right\rangle}
+\newcommand{\kreuzprod}[2]{#1\times#2}
+\newcommand{\crossprod}[2]{\kreuzprod{#1}{#2}}
 
 \begin{document}
     \ifthenelse{\boolean{release}}{
